@@ -1,0 +1,15 @@
+.button {
+  border-radius: 32px;
+  width: 62vw;
+  height: 10vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #1abc9c;
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  margin: 0.5%;
+  width: 32%;
+}
