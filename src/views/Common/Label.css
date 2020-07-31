@@ -1,0 +1,19 @@
+.common-label {
+  color: #16a085;
+  font-family: Montserrat;
+}
+
+.label1 {
+  font-size: 36px;
+  font-weight: 450;
+  margin-top: 87px;
+  margin-bottom: 12px;
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.label2 {
+  font-size: 23px;
+  font-weight: 420;
+}

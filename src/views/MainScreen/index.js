@@ -7,7 +7,7 @@ const MainScreen = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/face');
+    history.push('/face-screen');
   };
 
   return (
