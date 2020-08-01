@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrameID.css';
 
 const Frame = (props) => {
   const { title } = props;
@@ -6,5 +7,5 @@ const Frame = (props) => {
     <img className="appLogo" src={process.env.PUBLIC_URL + '/frame.svg'} />
   );
 };
-
+  
 export default Frame;

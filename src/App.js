@@ -3,6 +3,9 @@ import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import MainScreen from './views/MainScreen';
 import FaceScreen from './views/FaceScreen';
+import IDScreen from './views/IDScreen';
+import ReviewScreen from './views/ReviewScreen';
+import CompleteScreen from './views/CompleteScreen';
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <Route exact path="/" component={MainScreen} />
         <Route exact path="/face-screen" component={FaceScreen} />
         <Route exact path="/face-confirm" component={FaceScreen} />
+        <Route exact path="/id-screen" component={IDScreen} />
+        <Route exact path="/review-screen" component={ReviewScreen} />
+        <Route exact path="/complete-screen" component={CompleteScreen} />
         <Redirect to="/" />
       </Switch>
     </div>
