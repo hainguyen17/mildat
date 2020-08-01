@@ -7,7 +7,7 @@ import Webcam from '../Common/Webcam';
 
 import './index.css';
 
-const IdScreen = () => {
+const FingerScreen = () => {
   const history = useHistory();
 
   return (
@@ -22,4 +22,4 @@ const IdScreen = () => {
   );
 };
 
-export default IdScreen;
+export default FingerScreen;
