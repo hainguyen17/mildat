@@ -13,7 +13,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainScreen} />
         <Route exact path="/face-screen" component={FaceScreen} />
-        <Route exact path="/face-confirm" component={FaceScreen} />
         <Route exact path="/id-screen" component={IDScreen} />
         <Route exact path="/review-screen" component={ReviewScreen} />
         <Route exact path="/complete-screen" component={CompleteScreen} />

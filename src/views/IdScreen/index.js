@@ -7,21 +7,19 @@ import Webcam from '../Common/Webcam';
 
 import './index.css';
 
-const FaceScreen = () => {
+const IdScreen = () => {
   const history = useHistory();
 
   return (
     <div className="container">
-      <Label title="Bước 1: Chụp ảnh" type="label1" />
-      <Label
-        title="Giữ khuôn mặt ở giữa camera và bấm nút Chụp ảnh"
-        type="label2"
-      />
+      <Label type="label1" title="Bước 2: Quét vân tay" />
+      <Label title="Vui lòng đặt hai ngón tay cái lên máy quét" type="label2" />
       <div className="frame">
-        <Webcam />
+        <Frame />
       </div>
+      <Button title="TIẾP" />
     </div>
   );
 };
 
-export default FaceScreen;
+export default IdScreen;
