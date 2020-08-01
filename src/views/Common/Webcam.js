@@ -14,7 +14,7 @@ const WebcamCapture = () => {
   };
 
   const handleNext = () => {
-    history.push('/id-screen');
+    history.push('/finger-screen');
   };
 
   const handleCapture = () => {

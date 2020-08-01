@@ -3,7 +3,7 @@ import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import MainScreen from './views/MainScreen';
 import FaceScreen from './views/FaceScreen';
-import IdScreen from './views/IdScreen';
+import FingerScreen from './views/FingerScreen';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainScreen} />
         <Route exact path="/face-screen" component={FaceScreen} />
-        <Route exact path="/id-screen" component={IdScreen} />
+        <Route exact path="/finger-screen" component={FingerScreen} />
         <Redirect to="/" />
       </Switch>
     </div>
