@@ -14,15 +14,17 @@ const CompleteScreen = () => {
 
   return (
     <div className="container">
-      <CheckButton />
-      <Label title="Hồ sơ đã được lưu lại" type="label1" />
-      <Label
-        title="Thông tin đã lưu có thể được truy cập lại trong KHO DỮ LIỆU"
-        type="label2"
-      />
-      
+      <div className="subtitle">
+        <CheckButton />
+        <Label title="Hồ sơ đã được lưu lại" type="label1" />
+        <Label
+          title="Thông tin đã lưu có thể được truy cập lại trong KHO DỮ LIỆU"
+          type="label2"
+        />
+      </div>
       <Button onClick={handleClick} title="VỀ TRANG CHỦ" />
       <Button title="KHO DỮ LIỆU" />
+      
     </div>
   );
 };

@@ -9,13 +9,13 @@ const ReviewScreen = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/face-screen/face-confirm');
+    history.push('/complete-screen');
   };
 
   return (
     <div className="container">
       <Label title="Bước 4: Kiểm tra thông tin" type="label1" />
-      <Label
+      <Label className="subtitle"
         title="Vui lòng kiểm tra kĩ thông tin trước khi lưu"
         type="label2"
       />

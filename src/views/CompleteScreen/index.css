@@ -4,5 +4,7 @@
     align-items: center;
     vertical-align: center;
     margin-top: 10%;
-  }
-  
+}
+ .subtitle {
+   margin-bottom: 50px;
+ }
