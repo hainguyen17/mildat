@@ -6,6 +6,7 @@ import FaceScreen from './views/FaceScreen';
 import IDScreen from './views/IDScreen';
 import ReviewScreen from './views/ReviewScreen';
 import CompleteScreen from './views/CompleteScreen';
+import FingerScreen from './views/FingerScreen';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/id-screen" component={IDScreen} />
         <Route exact path="/review-screen" component={ReviewScreen} />
         <Route exact path="/complete-screen" component={CompleteScreen} />
+        <Route exact path="/finger-screen" component={FingerScreen} />
         <Redirect to="/" />
       </Switch>
     </div>
