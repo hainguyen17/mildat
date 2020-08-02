@@ -9,3 +9,7 @@
     vertical-align: center;
   }
   
+  #id-review {
+    width: 50%;
+    justify-content: space-around;
+  }

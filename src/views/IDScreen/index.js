@@ -7,10 +7,23 @@ import './index.css';
 
 const IDScreen = () => {
   const history = useHistory();
-
   const handleClick = () => {
-    history.push('/face-screen/face-confirm');
-  };
+    const IDScan = document.getElementById('id-scan');
+    const IDReview = document.getElementById('id-review');
+    IDScan.style.display = 'none';
+    IDReview.style.display = 'flex';
+  }
+
+  const handleGoBack = () => {
+    const IDScan = document.getElementById('id-scan');
+    const IDReview = document.getElementById('id-review');
+    IDScan.style.display = 'block';
+    IDReview.style.display = 'none';
+  }
+
+  const handleGoNext = () => {
+    history.push('/review-screen');
+  }
 
   return (
     <div className="container">
@@ -22,7 +35,13 @@ const IDScreen = () => {
       <div className="frameid">
         <FrameID />
       </div>
-      <Button onClick={handleClick} title="TIẾP" />
+      <div id="id-scan">
+        <Button onClick={() => handleClick()} title="TIẾP" buttonClass="small-button"/>
+      </div>
+      <div id="id-review" style={{display: 'none'}}>
+        <Button onClick={() => handleGoBack()} title="QUÉT LẠI" buttonClass="small-button trans-button"/>
+        <Button onClick={() => handleGoNext()} title="TIẾP" buttonClass="small-button"/>
+      </div>
     </div>
   );
 };

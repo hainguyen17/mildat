@@ -1,6 +1,6 @@
 .button {
   border-radius: 32px;
-  width: 62vw;
+  /* width: 62vw; */
   height: 10vh;
   border: 0;
   cursor: pointer;
@@ -12,4 +12,25 @@
   font-size: large;
   margin: 0.5%;
   width: 32%;
+}
+
+.small-button {
+  border-radius: 70px;
+  width: 20vw;
+  height: 7vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #1abc9c;
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: large;
+  margin: 0.5%;
+}
+
+.trans-button {
+  background-color: #fff !important;
+  border: 3px solid #1abc9c;
+  color: #1abc9c;
 }

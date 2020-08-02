@@ -24,7 +24,7 @@ const ReviewScreen = () => {
         <div className="review-img"></div>
         <div className="review-img"></div>
       </div>
-      <Button onClick={handleClick} title="LƯU" />
+      <Button onClick={handleClick} title="LƯU" buttonClass="small-button"/>
     </div>
   );
 };

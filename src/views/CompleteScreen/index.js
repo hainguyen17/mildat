@@ -22,8 +22,8 @@ const CompleteScreen = () => {
           type="label2"
         />
       </div>
-      <Button onClick={handleClick} title="VỀ TRANG CHỦ" />
-      <Button title="KHO DỮ LIỆU" />
+      <Button onClick={handleClick} title="VỀ TRANG CHỦ" buttonClass="small-button"/>
+      <Button title="KHO DỮ LIỆU" buttonClass="small-button trans-button"/>
       
     </div>
   );

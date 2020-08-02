@@ -26,8 +26,8 @@ const WebcamCapture = () => {
       {imgSrc ? (
         <>
           <img src={imgSrc} />
-          <Button onClick={handleCapture} title="CHỤP LẠI" />
-          <Button onClick={handleNext} title="TIẾP" />
+          <Button onClick={handleCapture} title="CHỤP LẠI" buttonClass="small-button trans-button"/>
+          <Button onClick={handleNext} title="TIẾP" buttonClass="small-button"/>
         </>
       ) : (
         <>
@@ -38,7 +38,7 @@ const WebcamCapture = () => {
             ref={webcamRef}
             screenshotFormat="image/jpeg"
           />
-          <Button onClick={capture} title="CHỤP ẢNH" />
+          <Button onClick={capture} title="CHỤP ẢNH" buttonClass="small-button"/>
         </>
       )}
     </>
