@@ -20,9 +20,9 @@ const ReviewScreen = () => {
         type="label2"
       />
       <div className="review-img-container">
-        <div className="review-img"></div>
-        <div className="review-img"></div>
-        <div className="review-img"></div>
+        <div className="review-img" />
+        <div className="review-img" />
+        <div className="review-img" />
       </div>
       <Button onClick={handleClick} title="LƯU" small />
     </div>

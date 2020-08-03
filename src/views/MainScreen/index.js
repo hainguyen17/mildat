@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import AppLogo from '../Common/AppLogo';
 import Button from '../Common/Button';
 import './index.css';
+
 const MainScreen = () => {
   const history = useHistory();
 

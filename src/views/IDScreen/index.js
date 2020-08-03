@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
 import FrameID from '../Common/FrameID';
-import './index.css';
 import CheckAnimation from '../Common/CheckAnimation';
 
 const IDScreen = () => {
