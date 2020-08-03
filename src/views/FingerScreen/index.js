@@ -24,7 +24,7 @@ const FingerScreen = () => {
   };
 
   return (
-    <div className="finger-container">
+    <div className="container">
       <Label type="label1" title="Bước 2: Quét vân tay" />
       <Label title="Vui lòng đặt hai ngón tay cái lên máy quét" type="label2" />
       {fingerprint ? (
@@ -47,7 +47,7 @@ const FingerScreen = () => {
       ) : (
         <>
           <div className="finger-frame">
-            <Frame fileName="frame.svg" />
+            <Frame fileName="Frame.svg" />
           </div>
           <div id="finger-scan">
             <Button onClick={() => handleClick()} title="QUÉT" small />

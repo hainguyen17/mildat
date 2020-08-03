@@ -13,7 +13,7 @@ const CompleteScreen = () => {
   };
 
   return (
-    <div className="complete-container">
+    <div className="container">
       <div className="subtitle">
         <CheckButton />
         <Label title="Hồ sơ đã được lưu lại" type="label1" />

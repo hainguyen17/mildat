@@ -4,6 +4,7 @@ import Button from '../Common/Button';
 import Label from '../Common/Label';
 import FrameID from '../Common/FrameID';
 import CheckAnimation from '../Common/CheckAnimation';
+import './index.css';
 
 const IDScreen = () => {
   const history = useHistory();

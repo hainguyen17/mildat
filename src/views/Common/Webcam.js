@@ -1,26 +1,30 @@
 import React from 'react';
 import Webcam from 'react-webcam';
 import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeImage, resetImage } from '../../actions/appData';
 import Button from './Button';
 import CheckAnimation from './CheckAnimation';
 import './Webcam.css';
 
 const WebcamCapture = () => {
   const webcamRef = React.useRef(null);
-  const [imgSrc, setImgSrc] = React.useState(null);
+  const { imgSrc } = useSelector((state) => state.appData);
+  const dispatch = useDispatch();
+
   const history = useHistory();
 
   const capture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
-    setImgSrc(imageSrc);
+    dispatch(changeImage(imageSrc));
   };
 
   const handleNext = () => {
     history.push('/finger-screen');
   };
 
-  const handleCapture = () => {
-    setImgSrc(null);
+  const handleRecapture = () => {
+    dispatch(resetImage());
   };
 
   return (
@@ -32,7 +36,7 @@ const WebcamCapture = () => {
           </CheckAnimation>
           <div className="webcam-button-container">
             <Button
-              onClick={handleCapture}
+              onClick={handleRecapture}
               title="CHỤP LẠI"
               small
               transparent

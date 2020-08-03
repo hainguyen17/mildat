@@ -2,13 +2,6 @@
   margin: 1.5rem;
 }
 
-.finger-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: center;
-}
-
 #finger-review {
   width: 50%;
   justify-content: space-around;
