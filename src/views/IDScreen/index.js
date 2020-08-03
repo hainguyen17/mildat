@@ -12,18 +12,18 @@ const IDScreen = () => {
     const IDReview = document.getElementById('id-review');
     IDScan.style.display = 'none';
     IDReview.style.display = 'flex';
-  }
+  };
 
   const handleGoBack = () => {
     const IDScan = document.getElementById('id-scan');
     const IDReview = document.getElementById('id-review');
     IDScan.style.display = 'block';
     IDReview.style.display = 'none';
-  }
+  };
 
   const handleGoNext = () => {
     history.push('/review-screen');
-  }
+  };
 
   return (
     <div className="container">
@@ -36,11 +36,16 @@ const IDScreen = () => {
         <FrameID />
       </div>
       <div id="id-scan">
-        <Button onClick={() => handleClick()} title="TIẾP" buttonClass="small-button"/>
+        <Button onClick={() => handleClick()} title="TIẾP" small />
       </div>
-      <div id="id-review" style={{display: 'none'}}>
-        <Button onClick={() => handleGoBack()} title="QUÉT LẠI" buttonClass="small-button trans-button"/>
-        <Button onClick={() => handleGoNext()} title="TIẾP" buttonClass="small-button"/>
+      <div id="id-review" style={{ display: 'none' }}>
+        <Button
+          onClick={() => handleGoBack()}
+          title="QUÉT LẠI"
+          small
+          transparent
+        />
+        <Button onClick={() => handleGoNext()} title="TIẾP" small />
       </div>
     </div>
   );

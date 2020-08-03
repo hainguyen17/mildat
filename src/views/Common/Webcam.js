@@ -1,7 +1,9 @@
 import React from 'react';
 import Webcam from 'react-webcam';
-import Button from './Button';
 import { useHistory } from 'react-router-dom';
+import Button from './Button';
+import './Webcam.css';
+import CheckAnimation from '../Common/CheckAnimation';
 
 const WebcamCapture = () => {
   const webcamRef = React.useRef(null);
@@ -23,24 +25,36 @@ const WebcamCapture = () => {
 
   return (
     <>
-      {imgSrc ? (
+      {imgSrc && (
         <>
-          <img src={imgSrc} />
-          <Button onClick={handleCapture} title="CHỤP LẠI" buttonClass="small-button trans-button"/>
-          <Button onClick={handleNext} title="TIẾP" buttonClass="small-button"/>
-        </>
-      ) : (
-        <>
-          <Webcam
-            screenshotQuality={1}
-            mirrored
-            audio={false}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
+          <CheckAnimation
+            className="check-animation"
+            height="62px"
+            width="62px"
           />
-          <Button onClick={capture} title="CHỤP ẢNH" buttonClass="small-button"/>
+          <img className="webcam-frame" src={imgSrc} />
+          <div className="webcam-button-container">
+            <Button
+              onClick={handleCapture}
+              title="CHỤP LẠI"
+              small
+              transparent
+            />
+            <Button onClick={handleNext} title="TIẾP" small />
+          </div>
         </>
       )}
+      <div style={imgSrc ? { display: 'none' } : {}}>
+        <Webcam
+          className="webcam-frame"
+          screenshotQuality={1}
+          mirrored
+          audio={false}
+          ref={webcamRef}
+          screenshotFormat="image/png"
+        />
+        <Button onClick={capture} title="CHỤP ẢNH" small />
+      </div>
     </>
   );
 };

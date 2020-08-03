@@ -15,7 +15,8 @@ const ReviewScreen = () => {
   return (
     <div className="container">
       <Label title="Bước 4: Kiểm tra thông tin" type="label1" />
-      <Label className="subtitle"
+      <Label
+        className="subtitle"
         title="Vui lòng kiểm tra kĩ thông tin trước khi lưu"
         type="label2"
       />
@@ -24,7 +25,7 @@ const ReviewScreen = () => {
         <div className="review-img"></div>
         <div className="review-img"></div>
       </div>
-      <Button onClick={handleClick} title="LƯU" buttonClass="small-button"/>
+      <Button onClick={handleClick} title="LƯU" small />
     </div>
   );
 };

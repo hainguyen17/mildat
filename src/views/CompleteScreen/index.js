@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
-import CheckButton from '../Common/CheckButton'
+import CheckButton from '../Common/CheckButton';
 import './index.css';
 
 const CompleteScreen = () => {
@@ -13,7 +13,7 @@ const CompleteScreen = () => {
   };
 
   return (
-    <div className="container">
+    <div className="complete-container">
       <div className="subtitle">
         <CheckButton />
         <Label title="Hồ sơ đã được lưu lại" type="label1" />
@@ -22,9 +22,8 @@ const CompleteScreen = () => {
           type="label2"
         />
       </div>
-      <Button onClick={handleClick} title="VỀ TRANG CHỦ" buttonClass="small-button"/>
-      <Button title="KHO DỮ LIỆU" buttonClass="small-button trans-button"/>
-      
+      <Button onClick={handleClick} title="VỀ TRANG CHỦ" small />
+      <Button title="KHO DỮ LIỆU" small transparent />
     </div>
   );
 };

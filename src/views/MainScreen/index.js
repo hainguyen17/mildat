@@ -16,9 +16,9 @@ const MainScreen = () => {
         <AppLogo />
       </div>
       <div className="button-holder">
-        <Button onClick={handleClick} title="Tạo Hồ Sơ" buttonClass="button"/>
-        <Button title="Kho Dữ Liệu" buttonClass="button"/>
-        <Button title="Sao Lưu Trên Hệ Thống" buttonClass="button"/>
+        <Button onClick={handleClick} title="Tạo Hồ Sơ" />
+        <Button title="Kho Dữ Liệu" />
+        <Button title="Sao Lưu Trên Hệ Thống" />
       </div>
     </div>
   );
