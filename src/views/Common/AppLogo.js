@@ -1,10 +1,11 @@
 import React from 'react';
 
-const AppLogo = (props) => {
-  const { title } = props;
-  return (
-    <img className="appLogo" src={process.env.PUBLIC_URL + '/mainLogo.svg'} />
-  );
-};
+const AppLogo = () => (
+  <img
+    className="appLogo"
+    src={`${process.env.PUBLIC_URL}/mainLogo.svg`}
+    alt="app-logo"
+  />
+);
 
 export default AppLogo;

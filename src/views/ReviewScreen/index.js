@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
-import Frame from '../Common/Frame';
 import './index.css';
 
 const ReviewScreen = () => {

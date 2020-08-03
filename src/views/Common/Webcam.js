@@ -2,8 +2,8 @@ import React from 'react';
 import Webcam from 'react-webcam';
 import { useHistory } from 'react-router-dom';
 import Button from './Button';
+import CheckAnimation from './CheckAnimation';
 import './Webcam.css';
-import CheckAnimation from '../Common/CheckAnimation';
 
 const WebcamCapture = () => {
   const webcamRef = React.useRef(null);
@@ -27,12 +27,9 @@ const WebcamCapture = () => {
     <>
       {imgSrc && (
         <>
-          <CheckAnimation
-            className="check-animation"
-            height="62px"
-            width="62px"
-          />
-          <img className="webcam-frame" src={imgSrc} />
+          <CheckAnimation height="62px" width="62px">
+            <img className="webcam-frame" src={imgSrc} alt="webcam-frame" />
+          </CheckAnimation>
           <div className="webcam-button-container">
             <Button
               onClick={handleCapture}

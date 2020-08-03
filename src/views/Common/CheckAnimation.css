@@ -1,0 +1,12 @@
+.check-animation {
+  z-index: 10;
+  /* position: absolute; */
+}
+
+.check-wrapper {
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible;
+}

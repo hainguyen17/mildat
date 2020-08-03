@@ -1,24 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
 import FrameID from '../Common/FrameID';
 import './index.css';
+import CheckAnimation from '../Common/CheckAnimation';
 
 const IDScreen = () => {
   const history = useHistory();
+  const [id, setId] = useState('');
+
   const handleClick = () => {
-    const IDScan = document.getElementById('id-scan');
-    const IDReview = document.getElementById('id-review');
-    IDScan.style.display = 'none';
-    IDReview.style.display = 'flex';
+    setId('id');
   };
 
   const handleGoBack = () => {
-    const IDScan = document.getElementById('id-scan');
-    const IDReview = document.getElementById('id-review');
-    IDScan.style.display = 'block';
-    IDReview.style.display = 'none';
+    setId('');
   };
 
   const handleGoNext = () => {
@@ -32,21 +29,33 @@ const IDScreen = () => {
         title="Vui lòng đặt CMND/CCCD/Hộ Chiếu lên máy quét và chờ vài giây"
         type="label2"
       />
-      <div className="frameid">
-        <FrameID />
-      </div>
-      <div id="id-scan">
-        <Button onClick={() => handleClick()} title="TIẾP" small />
-      </div>
-      <div id="id-review" style={{ display: 'none' }}>
-        <Button
-          onClick={() => handleGoBack()}
-          title="QUÉT LẠI"
-          small
-          transparent
-        />
-        <Button onClick={() => handleGoNext()} title="TIẾP" small />
-      </div>
+      {id ? (
+        <>
+          <CheckAnimation height="62px" width="62px">
+            <div className="id-frame">
+              <FrameID />
+            </div>
+          </CheckAnimation>
+          <div id="id-review">
+            <Button
+              onClick={() => handleGoBack()}
+              title="QUÉT LẠI"
+              small
+              transparent
+            />
+            <Button onClick={() => handleGoNext()} title="TIẾP" small />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="id-frame">
+            <FrameID />
+          </div>
+          <div id="id-scan">
+            <Button onClick={() => handleClick()} title="TIẾP" small />
+          </div>
+        </>
+      )}
     </div>
   );
 };

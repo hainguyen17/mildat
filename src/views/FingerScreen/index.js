@@ -29,14 +29,11 @@ const FingerScreen = () => {
       <Label title="Vui lòng đặt hai ngón tay cái lên máy quét" type="label2" />
       {fingerprint ? (
         <>
-          <CheckAnimation
-            className="finger-animation"
-            height="62px"
-            width="62px"
-          />
-          <div className="frame">
-            <Frame fileName="ColoredFrame.svg" />
-          </div>
+          <CheckAnimation height="62px" width="62px">
+            <div className="finger-frame">
+              <Frame fileName="ColoredFrame.svg" />
+            </div>
+          </CheckAnimation>
           <div id="finger-review">
             <Button
               onClick={() => handleGoBack()}
@@ -49,7 +46,7 @@ const FingerScreen = () => {
         </>
       ) : (
         <>
-          <div className="frame">
+          <div className="finger-frame">
             <Frame fileName="frame.svg" />
           </div>
           <div id="finger-scan">

@@ -2,6 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 
 import animationData from '../../lottie/checkGIF.json';
+import './CheckAnimation.css';
 
 const defaultOptions = {
   loop: false,
@@ -13,10 +14,20 @@ const defaultOptions = {
 };
 
 export default (props) => {
-  const { className, ...rest } = props;
+  const { children, ...rest } = props;
   return (
-    <div className={className}>
-      <Lottie options={defaultOptions} {...rest} />
+    <div>
+      <div className="check-wrapper">
+        <Lottie
+          className="check-animation"
+          style={{
+            margin: '0',
+          }}
+          options={defaultOptions}
+          {...rest}
+        />
+      </div>
+      {children}
     </div>
   );
 };

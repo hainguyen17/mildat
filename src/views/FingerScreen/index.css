@@ -1,7 +1,5 @@
-.finger-animation {
-  position: fixed;
-  margin-top: 176px;
-  margin-left: 355px;
+.finger-frame {
+  margin: 1.5rem;
 }
 
 .finger-container {

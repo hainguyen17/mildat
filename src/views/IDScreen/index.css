@@ -1,15 +1,15 @@
-.frame {
-    margin: 2%;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    vertical-align: center;
-  }
-  
-  #id-review {
-    width: 50%;
-    justify-content: space-around;
-  }
+.id-frame {
+  margin: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+}
+
+#id-review {
+  width: 50%;
+  justify-content: space-around;
+}
