@@ -9,18 +9,14 @@ import './index.css';
 
 const FingerScreen = () => {
   const history = useHistory();
+  const [fingerprint, setFingerprint] = useState('');
+
   const handleClick = () => {
-    const fingerScan = document.getElementById('finger-scan');
-    const fingerReview = document.getElementById('finger-review');
-    fingerScan.style.display = 'none';
-    fingerReview.style.display = 'flex';
+    setFingerprint('fingerprint');
   };
 
   const handleGoBack = () => {
-    const fingerScan = document.getElementById('finger-scan');
-    const fingerReview = document.getElementById('finger-review');
-    fingerScan.style.display = 'block';
-    fingerReview.style.display = 'none';
+    setFingerprint('');
   };
 
   const handleGoNext = () => {
@@ -31,22 +27,36 @@ const FingerScreen = () => {
     <div className="finger-container">
       <Label type="label1" title="Bước 2: Quét vân tay" />
       <Label title="Vui lòng đặt hai ngón tay cái lên máy quét" type="label2" />
-      <div className="frame">
-        <Frame />
-      </div>
-
-      <div id="finger-scan">
-        <Button onClick={() => handleClick()} title="QUÉT" small />
-      </div>
-      <div id="finger-review" style={{ display: 'none' }}>
-        <Button
-          onClick={() => handleGoBack()}
-          title="QUÉT LẠI"
-          small
-          transparent
-        />
-        <Button onClick={() => handleGoNext()} title="TIẾP" small />
-      </div>
+      {fingerprint ? (
+        <>
+          <CheckAnimation
+            className="finger-animation"
+            height="62px"
+            width="62px"
+          />
+          <div className="frame">
+            <Frame fileName="ColoredFrame.svg" />
+          </div>
+          <div id="finger-review">
+            <Button
+              onClick={() => handleGoBack()}
+              title="QUÉT LẠI"
+              small
+              transparent
+            />
+            <Button onClick={() => handleGoNext()} title="TIẾP" small />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="frame">
+            <Frame fileName="Frame.svg" />
+          </div>
+          <div id="finger-scan">
+            <Button onClick={() => handleClick()} title="QUÉT" small />
+          </div>
+        </>
+      )}
     </div>
   );
 };
