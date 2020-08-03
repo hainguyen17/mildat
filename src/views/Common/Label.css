@@ -6,8 +6,7 @@
 .label1 {
   font-size: 36px;
   font-weight: 450;
-  margin-top: 87px;
-  margin-bottom: 12px;
+  margin: 12px 0;
   @media screen and (max-width: 600px) {
     font-size: 24px;
   }
