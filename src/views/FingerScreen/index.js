@@ -30,7 +30,7 @@ const FingerScreen = () => {
       {fingerprint ? (
         <>
           <CheckAnimation height="62px" width="62px">
-            <div className="finger-frame">
+            <div className="frame">
               <Frame fileName="ColoredFrame.svg" />
             </div>
           </CheckAnimation>
@@ -46,7 +46,7 @@ const FingerScreen = () => {
         </>
       ) : (
         <>
-          <div className="finger-frame">
+          <div className="frame">
             <Frame fileName="Frame.svg" />
           </div>
           <div id="finger-scan">

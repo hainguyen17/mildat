@@ -1,3 +1,8 @@
 .frame-id-container {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+.frame-image {
+  height: 360px;
+  width: auto;
+}

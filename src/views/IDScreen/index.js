@@ -32,7 +32,7 @@ const IDScreen = () => {
       {id ? (
         <>
           <CheckAnimation height="62px" width="62px">
-            <div className="id-frame">
+            <div className="frame">
               <FrameID />
             </div>
           </CheckAnimation>
@@ -48,7 +48,7 @@ const IDScreen = () => {
         </>
       ) : (
         <>
-          <div className="id-frame">
+          <div className="frame">
             <FrameID />
           </div>
           <div id="id-scan">

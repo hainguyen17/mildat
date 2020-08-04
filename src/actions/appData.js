@@ -31,3 +31,10 @@ export const resetId = () => ({
   type: CHANGE_ID,
   payload: '',
 });
+
+export const submitData = () => async (dispatch, getState) => {
+  console.log(getState().appData);
+  dispatch(resetImage());
+  dispatch(resetFingerprint());
+  dispatch(resetId());
+};

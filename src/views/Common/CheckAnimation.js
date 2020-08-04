@@ -22,6 +22,7 @@ export default (props) => {
           className="check-animation"
           style={{
             margin: '0',
+            transform: 'translateX(-30%) translateY(25%)',
           }}
           options={defaultOptions}
           {...rest}

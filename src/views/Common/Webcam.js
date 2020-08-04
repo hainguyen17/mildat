@@ -32,7 +32,7 @@ const WebcamCapture = () => {
       {imgSrc && (
         <>
           <CheckAnimation height="62px" width="62px">
-            <img className="webcam-frame" src={imgSrc} alt="webcam-frame" />
+            <img className="frame" src={imgSrc} alt="webcam-frame" />
           </CheckAnimation>
           <div className="webcam-button-container">
             <Button
@@ -47,12 +47,13 @@ const WebcamCapture = () => {
       )}
       <div style={imgSrc ? { display: 'none' } : {}}>
         <Webcam
-          className="webcam-frame"
+          className="frame"
           screenshotQuality={1}
           mirrored
           audio={false}
           ref={webcamRef}
           screenshotFormat="image/png"
+          height={360}
         />
         <Button onClick={capture} title="CHỤP ẢNH" small />
       </div>

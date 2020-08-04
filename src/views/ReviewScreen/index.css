@@ -1,11 +1,10 @@
 .review-img-container {
   display: flex;
-  margin: 4rem 0;
 }
 
 .review-img {
-  width: 248px;
-  height: 248px;
+  width: 360px;
+  height: 360px;
   border: 2px solid #16a085;
   border-radius: 5px;
   margin: 0 25px;
@@ -15,5 +14,5 @@
 
 .image {
   width: 100%;
-  max-width: 248px;
+  max-width: 360px;
 }

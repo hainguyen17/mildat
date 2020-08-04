@@ -25,3 +25,7 @@ body > #root > div {
   align-items: center;
   vertical-align: center;
 }
+
+.frame {
+  margin: 3rem;
+}

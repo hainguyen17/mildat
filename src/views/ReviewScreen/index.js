@@ -1,11 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
 import './index.css';
+import { submitData } from '../../actions/appData';
 
 const ReviewScreen = () => {
+  const dispatch = useDispatch();
   const history = useHistory();
   const { imgSrc, fingerprintSrc, idSrc } = useSelector(
     (state) => state.appData,
@@ -18,6 +20,7 @@ const ReviewScreen = () => {
   };
 
   const handleClick = () => {
+    dispatch(submitData());
     history.push('/complete-screen');
   };
 
@@ -29,7 +32,7 @@ const ReviewScreen = () => {
         title="Vui lòng kiểm tra kĩ thông tin trước khi lưu"
         type="label2"
       />
-      <div className="review-img-container">
+      <div className="frame review-img-container">
         <div className="review-img">
           <img className="image" src={image} alt="webcam-preview" />
         </div>
