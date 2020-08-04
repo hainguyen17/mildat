@@ -47,7 +47,7 @@ const FingerScreen = () => {
       ) : (
         <>
           <div className="frame">
-            <Frame fileName="Frame.svg" />
+            <Frame fileName="frame.svg" />
           </div>
           <div id="finger-scan">
             <Button onClick={() => handleClick()} title="QUÉT" small />
