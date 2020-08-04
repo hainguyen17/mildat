@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Button from '../Common/Button';
 import Label from '../Common/Label';
 import FrameID from '../Common/FrameID';
+import Webcam from '../Common/Webcam'
 import CheckAnimation from '../Common/CheckAnimation';
 import './index.css';
 
@@ -29,7 +30,8 @@ const IDScreen = () => {
         title="Vui lòng đặt CMND/CCCD/Hộ Chiếu lên máy quét và chờ vài giây"
         type="label2"
       />
-      {id ? (
+      <Webcam />
+      {/* {id ? (
         <>
           <CheckAnimation height="62px" width="62px">
             <div className="frame">
@@ -55,7 +57,7 @@ const IDScreen = () => {
             <Button onClick={() => handleClick()} title="TIẾP" small />
           </div>
         </>
-      )}
+      )} */}
     </div>
   );
 };
