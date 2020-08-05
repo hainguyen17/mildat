@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Button from '../Common/Button';
+// import Button from '../Common/Button';
 import Label from '../Common/Label';
-import FrameID from '../Common/FrameID';
-import Webcam from '../Common/Webcam'
-import CheckAnimation from '../Common/CheckAnimation';
+// import FrameID from '../Common/FrameID';
+// import CheckAnimation from '../Common/CheckAnimation';
+import IDScanner from '../Common/IDScanner'
 import './index.css';
 
 const IDScreen = () => {
   const history = useHistory();
   const [id, setId] = useState('');
 
-  const handleClick = () => {
-    setId('id');
-  };
+  // const handleClick = () => {
+  //   setId('id');
+  // };
 
-  const handleGoBack = () => {
-    setId('');
-  };
+  // const handleGoBack = () => {
+  //   setId('');
+  // };
 
-  const handleGoNext = () => {
-    history.push('/review-screen');
-  };
+  // const handleGoNext = () => {
+  //   history.push('/review-screen');
+  // };
 
   return (
     <div className="container">
@@ -30,7 +30,7 @@ const IDScreen = () => {
         title="Vui lòng đặt CMND/CCCD/Hộ Chiếu lên máy quét và chờ vài giây"
         type="label2"
       />
-      <Webcam />
+      <IDScanner />
       {/* {id ? (
         <>
           <CheckAnimation height="62px" width="62px">
