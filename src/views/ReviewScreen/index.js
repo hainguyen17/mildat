@@ -18,7 +18,7 @@ const ReviewScreen = () => {
     fingerprint: fingerprintSrc || `${process.env.PUBLIC_URL}/ColoredFrame.svg`,
     id: idSrc || `${process.env.PUBLIC_URL}/id.svg`,
   };
-
+  
   const handleClick = () => {
     dispatch(submitData());
     history.push('/complete-screen');

@@ -1,11 +1,11 @@
 .common-label {
-  color: #16a085;
-  font-family: Montserrat;
+  color: #1656a0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .label1 {
   font-size: 36px;
-  font-weight: 450;
+  font-weight: 400;
   margin: 12px 0;
   @media screen and (max-width: 600px) {
     font-size: 24px;
@@ -14,5 +14,5 @@
 
 .label2 {
   font-size: 23px;
-  font-weight: 420;
+  font-weight: 300;
 }
