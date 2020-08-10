@@ -15,7 +15,7 @@ const CompleteScreen = () => {
   return (
     <div className="container">
       <div className="subtitle">
-        <CheckButton />
+        {/* <CheckButton /> */}
         <Label title="Hồ sơ đã được lưu lại" type="label1" />
         <Label
           title="Thông tin đã lưu có thể được truy cập lại trong KHO DỮ LIỆU"
