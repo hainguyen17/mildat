@@ -25,7 +25,7 @@ const IDScreen = () => {
 
   return (
     <div className="container">
-      <Label title="Bước 3: Quét CMND/CCCD/Hộ Chiếu" type="label1" />
+      <Label title="Bước 4: Quét CMND/CCCD/Hộ Chiếu" type="label1" />
       <Label
         title="Vui lòng đặt CMND/CCCD/Hộ Chiếu lên máy quét và chờ vài giây"
         type="label2"

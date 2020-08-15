@@ -25,7 +25,7 @@ const FingerScreen = () => {
 
   return (
     <div className="container">
-      <Label type="label1" title="Bước 2: Quét vân tay" />
+      <Label type="label1" title="Bước 3: Quét vân tay" />
       <Label title="Vui lòng đặt hai ngón tay cái lên máy quét" type="label2" />
       {fingerprint ? (
         <>

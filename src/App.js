@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import MainScreen from './views/MainScreen';
+import InputScreen from './views/InputScreen';
 import FaceScreen from './views/FaceScreen';
 import FingerScreen from './views/FingerScreen';
 import IDScreen from './views/IDScreen';
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={MainScreen} />
+        <Route exact path="/input-screen" component={InputScreen} />
         <Route exact path="/face-screen" component={FaceScreen} />
         <Route exact path="/finger-screen" component={FingerScreen} />
         <Route exact path="/id-screen" component={IDScreen} />

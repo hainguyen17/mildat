@@ -1,0 +1,46 @@
+.form {
+  /* color: #1656a0; */
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 25vw;
+  text-align: left;
+}
+
+.label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* display: flex; */
+    text-align: left;
+}
+
+.input-name {
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.input-field {
+    width: 100%;
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    height: 30px;
+    padding-left: 7px;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;
+ }
+ :-ms-input-placeholder {  
+    font-style: italic;
+ }
+
+ ::-webkit-datetime-edit {
+    font-style: italic;
+    color: grey }

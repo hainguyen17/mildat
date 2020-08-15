@@ -8,13 +8,13 @@ const MainScreen = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/face-screen');
+    history.push('/input-screen');
   };
 
   return (
     <div className="background-img">
       <div className="app-logo">
-        <AppLogo />
+        <AppLogo /> 
       </div>
       <div className="button-holder">
         <Button onClick={handleClick} title="Tạo Hồ Sơ" />

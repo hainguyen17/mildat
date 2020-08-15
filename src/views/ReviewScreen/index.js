@@ -26,7 +26,7 @@ const ReviewScreen = () => {
 
   return (
     <div className="container">
-      <Label title="Bước 4: Kiểm tra thông tin" type="label1" />
+      <Label title="Bước 5: Kiểm tra thông tin" type="label1" />
       <Label
         className="subtitle"
         title="Vui lòng kiểm tra kĩ thông tin trước khi lưu"

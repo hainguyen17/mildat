@@ -6,7 +6,7 @@ import './index.css';
 const FaceScreen = () => {
   return (
     <div className="container">
-      <Label title="Bước 1: Chụp ảnh" type="label1" />
+      <Label title="Bước 2: Chụp ảnh" type="label1" />
       <Label
         title="Giữ khuôn mặt ở giữa camera và bấm nút Chụp ảnh"
         type="label2"
