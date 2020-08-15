@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react';
+import moment from 'moment';
 import { useHistory } from 'react-router-dom';
 import './Form.css';
 import './Button.css';
+import { useDispatch } from 'react-redux';
+import { changeInfo } from '../../actions/appData';
 
 const initialState = {
   name: "",
@@ -10,10 +13,12 @@ const initialState = {
   address: "",
   company: "",
   jobTitle: "",
+  entryTime: undefined,
 };
 
 const Form = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const state = useRef(initialState);
   
@@ -26,8 +31,9 @@ const Form = () => {
     
   };
   
-  const handleSubmit = (event) => {
-    // console.log(state);
+  const handleSubmit = () => {
+    state.current['entryTime'] = moment().format("DD-MM-YYYY hh:mm:ss");
+    dispatch(changeInfo(state.current))
     history.push('/face-screen');
   }
   

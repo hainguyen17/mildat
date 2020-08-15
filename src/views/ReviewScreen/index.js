@@ -9,7 +9,7 @@ import { submitData } from '../../actions/appData';
 const ReviewScreen = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { imgSrc, fingerprintSrc, idSrc } = useSelector(
+  const { imgSrc, fingerprintSrc, idSrc, info } = useSelector(
     (state) => state.appData,
   );
 
@@ -23,6 +23,7 @@ const ReviewScreen = () => {
     dispatch(submitData());
     history.push('/complete-screen');
   };
+  console.log(info)
 
   return (
     <div className="container">
@@ -32,6 +33,10 @@ const ReviewScreen = () => {
         title="Vui lòng kiểm tra kĩ thông tin trước khi lưu"
         type="label2"
       />
+      <div className="info">
+        Tên: {info.name}<br />
+        Thời gian vào: {info.entryTime}<br />
+      </div>
       <div className="frame review-img-container">
         <div className="review-img">
           <img className="image" src={image} alt="webcam-preview" />

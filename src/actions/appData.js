@@ -1,6 +1,6 @@
 const { actionTypes } = require('../utils/consts');
 
-const { CHANGE_IMAGE, CHANGE_FINGERPRINT, CHANGE_ID } = actionTypes;
+const { CHANGE_IMAGE, CHANGE_FINGERPRINT, CHANGE_ID, CHANGE_INFO } = actionTypes;
 
 export const changeImage = (imgSrc) => ({
   type: CHANGE_IMAGE,
@@ -16,6 +16,11 @@ export const changeId = (idSrc) => ({
   type: CHANGE_ID,
   payload: idSrc,
 });
+
+export const changeInfo = (info) => ({
+  type: CHANGE_INFO,
+  payload: info,
+})
 
 export const resetImage = () => ({
   type: CHANGE_IMAGE,

@@ -16,3 +16,9 @@
   width: 100%;
   max-width: 360px;
 }
+
+.info {
+  margin-top: 20px;
+  color: #1656a0;
+  font-family: 'Roboto', sans-serif;
+}

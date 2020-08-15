@@ -1,11 +1,12 @@
 import { actionTypes } from '../utils/consts';
 
-const { CHANGE_IMAGE, CHANGE_FINGERPRINT, CHANGE_ID } = actionTypes;
+const { CHANGE_IMAGE, CHANGE_FINGERPRINT, CHANGE_ID, CHANGE_INFO } = actionTypes;
 
 const initialState = {
   imgSrc: '',
   fingerprintSrc: '',
   idSrc: '',
+  info: {},
 };
 
 export default (state = initialState, action) => {
@@ -24,6 +25,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         idSrc: action.payload,
+      };
+    case CHANGE_INFO:
+      return {
+        ...state,
+        info: action.payload,
       };
     default:
       return state;
